@@ -3,4 +3,11 @@ html
   head
     title Play Hangman on node.js
   body
-    h1 Add words to the database
+    h1 #{title}
+    h3 Submit a word!
+
+    form(name="input", action="/create", method="post")
+      key Word
+        input(type="text", name="word")
+
+      input(type="submit", value="Submit")
